@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 public class Day3Part2 {
 
     public static void main(String[] args) throws Exception {
-        var rows = Files.lines(Paths.get(Day3Part2.class.getResource("input").toURI()))
+        var rows = Files.lines(Paths.get(Day3Part2.class.getResource("/day3/input").toURI()))
                 .map(String::toCharArray)
                 .toArray(char[][]::new);
 

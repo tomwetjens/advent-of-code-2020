@@ -18,7 +18,7 @@ public class Day4Part2 {
             ") ?)*$");
 
     public static void main(String[] args) throws Exception {
-        try (var reader = Files.newBufferedReader(Paths.get(Day4Part2.class.getResource("input").toURI()))) {
+        try (var reader = Files.newBufferedReader(Paths.get(Day4Part2.class.getResource("/day4/input").toURI()))) {
             int valid = 0;
 
             boolean byr = false;
@@ -48,10 +48,7 @@ public class Day4Part2 {
                     pid = false;
                     cid = false;
                 } else {
-                    var matches = PATTERN.matcher(line).matches();
-                    System.out.println(matches + " -> " + line);
-
-                    if (matches) {
+                    if (PATTERN.matcher(line).matches()) {
                         var pairs = line.split(" ");
                         for (var pair : pairs) {
                             var key = pair.split(":", 2)[0];

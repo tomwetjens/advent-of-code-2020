@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 public class Day4Part1 {
 
     public static void main(String[] args) throws Exception {
-        try (var reader = Files.newBufferedReader(Paths.get(Day4Part1.class.getResource("input").toURI()))) {
+        try (var reader = Files.newBufferedReader(Paths.get(Day4Part1.class.getResource("/day4/input").toURI()))) {
             int valid = 0;
 
             boolean byr = false;
